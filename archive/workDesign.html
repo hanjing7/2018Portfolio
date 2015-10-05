@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html lang="en"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+<title>Jing Han | Work Presentation</title> 
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head> 
+<?php
+$fName = basename(__FILE__);
+  //$fName = basename($_SERVER['REQUEST_URI'],'.php');
+?>
+<body>
+<?php
+include 'header.php';
+?>
+<div class="intro">
+<p>I enjoy working in both physical and digital spaces, collaborating with 
+multiple design disciplines to create unique interactions and experiences. 
+I work to synthesize and develop designs through research and prototyping.
+I am dedicated in developing web related service to facilitate the access of 
+information by integrating rigorous logistics flow, comprehensive interaction 
+processes, aesthetically appealing graphic elements in the construction process.</p>
+
+<p>My passion lies in analyzing complex system and building user friendly service. 
+I have completed numerous web projects under various platform for part-time, courses and interns.</p>
+
+</div>
+<div id="all" class="all"> 
+<div id="one" class="number"> 
+</div> 
+<div id="two" class="number"> 
+</div> 
+<div id="three" class="number"> 
+</div> 
+<div id="four" class="number"> 
+</div> 
+<div id="five" class="number"> 
+</div> 
+</div> 
+<div id="loading" class="loading"> 
+<img src="http://files.jb51.net/file_images/article/201211/200803131036175436.gif" 
+style="margin-left: auto;    margin-right: auto;    text-align: center;    display: table-cell;"/> 
+</div> 
+<div id="toTop"><span>.</span>
+</div> 
+<?php
+include 'footer.php';
+?>
+</body> 
+
+<script type="text/javascript"> 
+
+window.onload = function () { 
+
+//初始参数 
+var reset = 0; //某些滚动条会触发三次scroll事件 用这个解决 
+var surplusHeight = 800; //差值 
+var imgWidth = "240px"; //img的宽度 
+var imgHeight = 0; //img的高度 
+var textHeight = 0; //文字高度 
+var showTopButtonHeight = 500;//回到顶部按钮的距离 
+var bigDivCount = 3; 
+var div1 = $("one"); 
+var div2 = $("two"); 
+var div3 = $("three"); 
+var div4 = $("four"); 
+var div5 = $("five"); 
+var loading = $("loading"); 
+var toTop = $("toTop"); 
+var ran = 0;
+//得到浏览器的名称 
+var browser = getBrowser(); 
+//数据源 
+var imgArray = []; //img数组 也就是数据来源 
+var textArray = []; //img底下的文字和img对应 
+textArray[0] = "<b>Small</B> preview of small personal project I'm going to be working in next few months. Since my time is limited I'm probably going to work on this about an hour a day, means I will hate it by the end of project"; 
+textArray[1] = "One of a couple (super early) layout examples I am working through to find the balance of color, purpose, brand story etc."; 
+textArray[2] = "Continuing to evolve the assets and execution of the new branding we are putting in place for"; 
+textArray[3] = "Working out some early wires to go along with this weeks delivery of logotype modifications and a user flow study. It's all about building from the foundation up"; 
+textArray[4] = "Working on a user flow study for Assembly. Defining the current experience and also highlighting gaps in user experience"; 
+textArray[5] = "Working out some modifications as we get closer to finalizing the logotype for Assembly. These are not pixel perfect lock ups, just comparing directions at the moment and then picking a single option to refine and perfect"; 
+textArray[6] = "This is a small one-off template I did for a health site marketing page. It was fun to work in a more vibrant color palette then I typically use."; 
+textArray[7] = "Everyone knows HTML email design is just the worst thing. But despite the necessity for an excess of tables and Helvetica, I feel pretty good about the way these turned out. It helps that Classpass has such a fun brand."; 
+textArray[8] = "This is a design I created for Chartbeat’s Perspectives Dashboard"; 
+textArray[9] = "This redesign was challenging, since we had to be consistent with the app’s existing simple, bold, branding; we also needed to incorporate user experience improvements in a subtle way that would be intuitive for current users."; 
+textArray[10] = "This shot's from the calculator tool we built, see attached for the design of the other tabs."; 
+textArray[11] = "Here's another one from my time at Chartbeat; this shot's from our pricing page redesign."; 
+textArray[12] = "It shows the trending topics in different categories across the internet, and how they rank based on popularity (concurrent visitors) vs. "; 
+textArray[13] = "Here's another one from my time at Chartbeat; this shot's from our pricing page redesign."; 
+textArray[14] = "Here's another one from my time at Chartbeat; this shot's from our pricing page redesign."; 
+textArray[15] = "Here's another one from my time at Chartbeat; this shot's from our pricing page redesign."; 
+imgArray[0] = "images/workstrip/photo-2.jpg"; 
+imgArray[1] = "images/workstrip/photo-3.jpg"; 
+imgArray[2] = "images/workstrip/photo-4.jpg"; 
+imgArray[3] = "images/workstrip/photo-5.jpg"; 
+imgArray[4] = "images/workstrip/photo-6.jpg"; 
+imgArray[5] = "images/workstrip/photo-7.jpg"; 
+imgArray[6] = "images/workstrip/photo-8.jpg"; 
+imgArray[7] = "images/workstrip/photo-9.jpg"; 
+imgArray[8] = "images/workstrip/photo-10.jpg"; 
+imgArray[9] = "images/workstrip/photo-11.jpg"; 
+imgArray[10] = "images/workstrip/photo-12.jpg"; 
+imgArray[11] = "images/workstrip/photo-13.jpg"; 
+imgArray[12] = "images/workstrip/photo-14.jpg"; 
+imgArray[13] = "images/workstrip/photo-15.jpg"; 
+imgArray[14] = "images/workstrip/photo-16.jpg"; 
+imgArray[15] = "images/workstrip/photo-17.jpg"; 
+//初始化 
+loadImg(); 
+//主会场 
+window.onscroll = fun_scroll; 
+//滚动方法 
+function fun_scroll() { 
+
+
+var topAll = (browser == "Firefox") ? document.documentElement.scrollHeight : document.body.scrollHeight; 
+//卷上去的高度 
+var top_top = document.body.scrollTop || document.documentElement.scrollTop; 
+//回到顶部按钮操作 
+if (top_top > showTopButtonHeight) 
+toTop.style.display = "block"; 
+else 
+toTop.style.display = "none"; 
+//控制滚动条次数以及判断是否到达底部 
+if (reset == 0) { 
+var topAll = (browser == "Firefox") ? document.documentElement.scrollHeight : document.body.scrollHeight; //body的高度 
+var top_top = document.body.scrollTop || document.documentElement.scrollTop; //卷上去的高度 
+var result = topAll - top_top; 
+if (result < surplusHeight) { 
+//setTimeout(loadImg, 1000); 
+reset = 1; 
+} 
+} else { 
+setTimeout(function () { reset = 0; }, 1000); 
+} 
+} 
+//加载图片 
+function loadImg() { 
+loading.style.display = "none"; 
+for (var i = 0; i < bigDivCount; i++) { 
+div1.appendChild(addDiv()); 
+div2.appendChild(addDiv()); 
+div3.appendChild(addDiv()); 
+div4.appendChild(addDiv()); 
+div5.appendChild(addDiv()); 
+} 
+setTimeout(function () { 
+var hh = (browser == "Firefox") ? document.documentElement.scrollHeight : document.body.scrollHeight; 
+loading.style.top = hh + "px"; 
+loading.style.display = "block"; 
+}, 1000); 
+} 
+//声明一个包含img和title的div 
+function addDiv() { 
+//数组下标的随机值 
+/*var ran = 0;Math.round(Math.random() * (imgArray.length - 1)); */
+//title层 
+var small_div = document.createElement("div"); 
+small_div.innerHTML = textArray[ran]; 
+//内部img 
+var img = document.createElement("img"); 
+img.alt = ""; 
+img.src = imgArray[ran]; 
+img.style.width = imgWidth; 
+ran=ran+1;
+//包含img的层 
+var div = document.createElement("div"); 
+div.className = "content"; 
+div.appendChild(img); 
+div.appendChild(small_div); 
+return div; 
+} 
+//通过id得到对象 
+function $(id) { 
+return document.getElementById(id); 
+} 
+//得到浏览器的名称 
+function getBrowser() { 
+var OsObject = ""; 
+if (navigator.userAgent.indexOf("MSIE") > 0) { 
+return "MSIE"; 
+} 
+if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) { 
+return "Firefox"; 
+} 
+if (isSafari = navigator.userAgent.indexOf("Safari") > 0) { 
+return "Safari"; 
+} 
+if (isCamino = navigator.userAgent.indexOf("Camino") > 0) { 
+return "Camino"; 
+} 
+if (isMozilla = navigator.userAgent.indexOf("Gecko/") > 0) { 
+return "Gecko"; 
+} 
+} 
+//回到顶部 
+toTop.onclick = function () { 
+var count = 500; //每次的距离 
+var speed = 200; //速度 
+var timer = setInterval(function () { 
+var top_top = document.body.scrollTop || document.documentElement.scrollTop; 
+var tt = top_top - count; 
+tt = (tt < 300) ? 0 : tt; 
+if (top_top > 0) 
+window.scrollTo(tt, tt); 
+else 
+clearInterval(timer); 
+}, speed) 
+}; 
+} 
+</script> 
+</html>

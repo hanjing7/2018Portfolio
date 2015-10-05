@@ -1,0 +1,97 @@
+
+	
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Charge Reconciliation</title>	
+	
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="myscripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+
+		/* Picture Styles */
+		#picture{ background:#FFF url('charge/OverallDiagram.png') no-repeat; overflow:hidden; background-size:1300px}
+		button{margin: 2% 7% 0 1%;}
+			
+			/* Item Specific More Button */
+			#exp1{ top: 26%;left: 24%;}
+			#exp2{ top: 31%; left: 48%; }
+			#exp3{ top: 24%;left: 48%;}
+			#exp4{ top: 15%; left: 59%; }
+			#exp5{ top: 15%;left: 70%;}
+
+	</style>
+
+</head>
+
+<body>
+	<div><h1>Charge Reconciliation</h1>
+	<a href="index.html"><button class="charg" >BACK</button></a>
+	<a href="charge.html" class="charge">Process</a>
+	<a href="charge1.html" class="charge">Dataflow</a>
+
+	</div>
+	<div id="picture">		
+		<!-- More Info Buttons -->
+		
+		<div class="more" id="exp1" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span>Actual accrual may different from the budgeted accrual as the program investigator usually tries to find all available patients, so usually the actual accrual of PTs would exceed the budgeted accrual unless it is hard to find the qualified PT.</li></span>
+			
+		</div>
+		
+		<div class="more" id="exp2" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>Medical school agrees to add “Core Service charges” together with the salary charge to catch up the expense for study by including supplemental support cost for one study. </span>
+		</div>
+		<div class="more" id="exp3" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span><li>	The system has cumulated several standard queries over the years. For all the employee summary salary charges, look up how many people are CTO </span>
+			
+		</div>
+		
+		<div class="more" id="exp4" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>The M Report shows the financial performance for the entire project period (or the last 5 years of the project.)  You can get the current project balance by running the Statement of Activity Report, but I prefer the M Report because it gives you revenue and expenses each year for the last 5 years.</span>
+		</div>
+		
+		<div class="more" id="exp5" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>Running an effort report on RETA (there is a drop down box with all of the studies listed and FS select the study he is reviewing).  Then set the report parameters making sure the entire life of the study is covered.  </span>
+		</div>
+		
+		<!-- Info Boxes -->
+		<div id="infobox">
+			<span class="close"><a href="#"><img src="close.png"></a></span>
+			<br>
+			
+			<div id="exp1_info" style="display: none;">
+				<img src="charge/1.png"><br>
+			</div>
+			
+			<div id="exp2_info" style="display: none;">
+				<img src="charge/2.png"><br>
+			</div>
+			<div id="exp3_info" style="display: none;">
+				<img src="charge/3.png"><br>
+			</div>
+			
+			<div id="exp4_info" style="display: none;">
+				<img src="charge/4.png"><br>
+			</div>
+			<div id="exp5_info" style="display: none;">
+				<img src="charge/5.png"><br>
+			</div>
+			
+
+		</div>
+		
+		<!-- Dimmed Background -->
+		<div id="fade_bg">&nbsp;</div>
+		
+	</div>
+	
+</body></html>

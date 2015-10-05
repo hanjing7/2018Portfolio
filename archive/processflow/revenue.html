@@ -1,0 +1,65 @@
+
+	
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Revenue Collection</title>	
+	
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="myscripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		
+		/* Picture Styles */
+		#picture{ background:#FFF url('revenue/OverallDiagram.png') no-repeat; overflow:hidden; background-size: 1200px 1200px; background-position: 35% 0%;}
+			
+			/* Item Specific More Button */
+			#exp1{ top: 52%;left: 52%;}
+			#exp2{ top: 77%; left: 72%; }
+			
+		
+	</style>
+	
+</head>
+
+<body>
+	<h1>Revenue Reconciliation</h1>
+	<a href="index.html"><button class="revenue" >BACK</button></a>
+	<div id="picture">
+		
+		<!-- More Info Buttons -->
+		
+		<div class="more" id="exp1" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span><li>	Add “0” in front of short codes missing a digit</li><li>	As template constrained, [Vouchur Comment] shouldn't exceed certain limit in length</li></span>
+			
+		</div>
+		
+		<div class="more" id="exp2" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>For the Core Services Upload the controller id is “coresvcs.” Once SUB is processed, you should receive an email titled sub.processing@umich.edu with all SUB records read, successful transactions and if there were any errors. The file is saved in the folder for the month that Core Services.</span>
+		</div>
+		
+		<!-- Info Boxes -->
+		<div id="infobox">
+			<span class="close"><a href="#"><img src="close.png"></a></span>
+			<br>
+			
+			<div id="exp1_info" style="display: none;">
+				<img src="revenue/1.png"><br>
+			</div>
+			
+			<div id="exp2_info" style="display: none;">
+				<img src="revenue/2.png"><br>
+			</div>
+			
+	
+		</div>
+		
+		<!-- Dimmed Background -->
+		<div id="fade_bg">&nbsp;</div>
+		
+	</div>
+
+</body></html>

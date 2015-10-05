@@ -1,0 +1,171 @@
+/*
+---------------------------------------------------------------------------------
+thingsthatarebrown.com  (matt brown)
+---------------------------------------------------------------------------------
+*/
+#doc2{
+width: 100%!important;
+overflow: visible;
+}
+body {
+color: #57352d;
+overflow: visible;
+}
+h1{
+    float: left; height:1em; font-family: Helvetica; color:#eee;
+    margin-top: 3%;  
+    display:inline-block;
+}
+
+#header {
+  height: 50px;
+  line-height: 38px;
+  position: fixed;resume3
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  background-color: rgb(172, 217, 245);
+}
+
+#header ul {
+  width: 950px;
+  margin: 0 auto;
+  padding: 7px 0 0;
+  list-style-type: none; 
+  overflow: scroll; 
+}
+
+
+
+#header ul li {
+  display: inline;
+  margin-right: 10px;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  float: left;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: rgb(28, 68, 119);
+}
+
+
+
+#header ul li a {
+  line-height: 24px;
+  font-size: 18px;
+  font-family: Avenir;
+  /* background: url(images/header-right.png) right 0; */
+  float: left;
+  color: #FCF9F9;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+}
+
+
+
+#header ul li a:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+
+
+#header ul li a span {
+  display: block;
+  height: 26px;
+  float: left;
+  /* background: url(images/header-left.png) no-repeat; */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.msg { padding: 10px; background: #222; position: relative; }
+.msg h1 { color: #fff;  }
+.msg a { margin-left: 20px; background: #408814; color: white; padding: 4px 8px; text-decoration: none; }
+.msg a:hover { background: #266400; }
+
+/* //-- yui-grids style overrides -- */
+#inner { padding: 10px 80px; margin: auto; background-color: #F7F3EE;background-image: url(http://www.transparenttextures.com/patterns/grid-noise.png); border: solid #57352d; border-width: 8px 0 2px 0; }
+.yui-gf { margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #ccc; }
+
+/* //-- header, body, footer -- */
+#hd { margin: 1.5em 0 1.5em 0; padding-bottom: 0.5em; border-bottom: 1px solid #ccc }
+#hd h2 { text-transform: uppercase; letter-spacing: 2px; }
+/*#bd, #ft { margin-bottom: 2em; }*/
+
+/* //-- footer -- */
+#ft { padding: 1em 0 5em 0; font-size: 92%; border-top: 1px dashed #ccc; text-align: center; }
+#ft p { margin-bottom: 0; text-align: center;   }
+
+/* //-- core typography and style -- */
+#hd h1 { font-size: 48px; text-transform: uppercase; letter-spacing: 3px; }
+h2 { font-size: 152% }
+h3, h4 { font-size: 122%; }
+h2, h3, h4 { color: #57352d; }
+p { font-size: 100%; line-height: 18px; padding-right: 1em; }
+a { color: #57352d }
+a:hover { text-decoration: none; }
+strong { font-weight: bold; }
+li { line-height: 24px; border-bottom: 1px solid #ccc; }
+p.enlarge { font-size: 144%; padding-right: 6.5em; line-height: 24px; }
+p.enlarge span { color: #000 }
+.contact-info { margin-top: 7px; }
+.first h2 { font-style: italic; }
+.last { border-bottom: 0 }
+
+
+/* //-- section styles -- */
+
+a#pdf { display: block; float: left; background: #e4892a; color: white; padding: 6px 20px 6px 20px; margin:4px 0 6px; text-decoration: none;  }
+a#pdf:hover { background: #57352d; }
+
+.job { position: relative; margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #ccc; }
+.job h4 { position: absolute; top: 0.35em; right: 0 }
+.job p { margin: 0.75em 0 1em 0; }
+
+.last { border: none; }
+.skills-list {  }
+.skills-list ul { margin: 0; }
+.skills-list li { margin: 3px 0; padding: 3px 0; }
+.skills-list li span { font-size: 152%; display: block; margin-bottom: -2px; padding: 0 }
+
+.talent h2 { margin-bottom: 6px; }
+
+#srt-ttab { margin-bottom: 100px; text-align: center;  }
+#srt-ttab img.last { margin-top: 20px }
+
+/* --// override to force 1/8th width grids -- */
+
+
+
+/*nav {
+    margin: 4% 0;float:right;
+    display: inline-block;
+}
+nav>a {
+    text-transform: uppercase;  font-size: 15px;  font-family: "Trebuchet MS", Arial, sans-serif;  text-decoration: none;  text-shadow: 1px 1px 5px #fff;  letter-spacing: 1px;  padding-right: 10px;  color: #ddd;  margin-left: 10px;
+}*/
+
+header {
+    position: relative; top:0; height:auto;  overflow:hidden;margin:auto;
+}
+
+
+
+		@media screen and (min-width : 975px){
+header {width:975px; }
+.talent { width: 32%; float: left }
+.yui-gf .yui-u{width:80.2%;}
+.yui-gf div.first{width:12.3%;}
+#header ul {   width: 950px;}
+			}
+			@media screen and (max-width : 975px){
+			nav{display:none;}
+			.yui-gf .yui-u .yui-gf div.first .talent{display:block; width:100%}
+			.yui-ge .yui-u, .yui-gf div.first{display:block; width:100%}
+			.job{margin:2em 0;}
+			.job h4 {top: -1.65em;}
+			p.enlarge {font-size: 100%;padding-right: 1.5em;line-height: 24px;}
+			#header ul {   width: 100%;}
+			}

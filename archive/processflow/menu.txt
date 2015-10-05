@@ -1,0 +1,95 @@
+
+	
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Revenue Collection</title>	
+	
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="myscripts.js"></script>
+	
+	<style type="text/css">
+		
+		/* General Styles */
+		*{ padding:0px; margin:0px; }
+		img{ border: none; }
+		a:focus, a:active{ outline:none; }
+		body{ text-align:center; background:#111; }
+		h1{ font:bold 18px Helvetica, Arial, sans-sarif; color:#FFF; margin:20px 0 0 0; }
+		
+		/* Picture Styles */
+		#picture{ position:relative; top:20px; width: 100%;height: 1400px; margin:0px auto; background:#FFF url('revenue/OverallDiagram.png') no-repeat; overflow:hidden; background-position: 35% 0%;}
+			
+			/* General More Button */		
+			.more{ position:absolute; width:20px; height:20px; background:url('dim.png'); border:1px solid #444; padding:5px; text-align:left; overflow:hidden; }
+			
+			.more span{ position:absolute; left:60px; width:160px; padding:15px 0 0 5px; color:#FFF; font:bold 13px Lucida Grande, Arial, sans-serif; text-shadow:#000 1px 1px 0px; }
+			
+			/* Item Specific More Button */
+			#exp1{ top: 39%;left: 46%;}
+			#exp2{ top: 58%; left: 67%; }
+			
+			/* General Info Box */
+			#infobox{ position: absolute;
+					left: 350px;
+					top: 20px;
+					bottom: 200px;
+					z-index: 20;
+					margin: 0 0 -100px -150px;
+					background: #FFF;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;}
+				#infobox a, #infobox a:visited{ font:italic 16px Georgia, serif; color:#555; text-decoration:none; }
+				#infobox a:hover{ text-decoration:underline; }
+				
+				/* Close button for info box */
+				span.close{position:absolute; right:5px; top:5px;}
+			
+			/* The dimmed background when the info box is showing */	
+			#fade_bg{ position:absolute; z-index:15; width:100%; height:100%; background:url('dim.png'); display:none;}
+		
+	</style>
+	
+</head>
+
+<body>
+	<h1>Revenue Reconciliation</h1>
+	<div id="picture">
+		
+		<!-- More Info Buttons -->
+		
+		<div class="more" id="exp1" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span><li>	Add “0” in front of short codes missing a digit</li><li>	As template constrained, [Vouchur Comment] shouldn't exceed certain limit in length</li></span>
+			
+		</div>
+		
+		<div class="more" id="exp2" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>For the Core Services Upload the controller id is “coresvcs.” Once SUB is processed, you should receive an email titled sub.processing@umich.edu with all SUB records read, successful transactions and if there were any errors. The file is saved in the folder for the month that Core Services.</span>
+		</div>
+		
+		<!-- Info Boxes -->
+		<div id="infobox">
+			<span class="close"><a href="#"><img src="close.png"></a></span>
+			<br>
+			
+			<div id="exp1_info" style="display: none;">
+				<img src="revenue/1.png"><br>
+			</div>
+			
+			<div id="exp2_info" style="display: none;">
+				<img src="revenue/2.png"><br>
+			</div>
+			
+	
+		</div>
+		
+		<!-- Dimmed Background -->
+		<div id="fade_bg">&nbsp;</div>
+		
+	</div>
+
+</body></html>

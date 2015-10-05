@@ -1,0 +1,247 @@
+/*Display control on screen size*/
+/*Smaller than 975*/
+ @media only screen and (max-width: 975px) {
+ #menuWrapper{display:none;}
+ #respWrapper img {
+  max-width: 100%;
+  height: auto;
+}
+div#respWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo img{
+    width:50%;
+}
+}
+/*Bigger than 975*/
+ @media only screen and (min-width: 975px) {
+ #respWrapper{display:none;}
+}
+
+ @media only screen and (min-width: 1600px) {
+body{padding-bottom: 10%!important}
+}
+
+/*Work Design page style*/
+*{ 
+margin:0; 
+padding:0; 
+} 
+
+.logo
+{z-index: 3;position:fixed;top: 20px;left: 66px}
+
+.all{ 
+margin:0 10%; 
+width:100%; 
+} 
+.number{ 
+float:left; 
+width:260px; 
+} 
+
+body 
+{ 
+background-color: #6E615C;
+box-shadow: inset 0 0 5em 2em #46332C;
+background-size: 100% 800;
+background-color: #46332c;
+background-image: url(http://www.transparenttextures.com/patterns/large-leather.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+padding:10% 6% 80px 6%;
+max-height:800px;
+} 
+p{
+font-size: 1em;
+line-height: 1.5em;
+margin:2% 10%;
+color:#e6e6e6;
+}
+
+#menuWrapper{ 
+    -webkit-box-shadow: -1px 51px 122px 4px rgba(53, 27, 19,1);
+    -moz-box-shadow: -1px 51px 122px 4px rgba(53, 27, 19,1);
+    box-shadow: -1px 51px 122px 4px rgb(53, 27, 19);
+} 
+.loading{ 
+position: relative; 
+width:100%; 
+height:80px; 
+display:none; 
+padding:5px;
+text-align:center; 
+background-color:#b3b3b3; 
+} 
+#toTop 
+{ 
+position:fixed; 
+_position:fixed; 
+font-size:12px; 
+color:white; 
+width:50px; 
+height:50px;
+text-align:center; 
+right:3%; 
+bottom:100px; 
+cursor:pointer; 
+background-image:url(images/to-top.png); 
+background-repeat: no-repeat;
+background-size: contain;
+display:none; 
+} 
+
+position: fixed;height:40px;padding:5px;text-align: center;}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+
+/*Home index page style*/
+
+.menuWrapper{
+    font-family: Avenir, Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    /*text-transform:uppercase;*/
+    letter-spacing: normal;
+    line-height: 1.45em;
+    position:relative;
+    margin:auto;
+    height:542px;
+    width:975px;
+    background-position:0 0;
+    background-repeat:no-repeat;
+    background-color:transparent;
+}
+ul.menu{
+    list-style:none;
+    width:111%;
+}
+ul.menu > li{
+    float:left;
+    width:30%;
+    height:542px;
+    border-right:1px solid #777;
+    background-repeat:no-repeat;
+    background-color:transparent;
+}
+ul.menu > li.last{
+    border:none;
+}
+.bg2{
+    background-image: url(../images/3.jpg);
+	background-size:975px 543px;
+}
+.bg3{
+    background-image: url(../images/1.jpg);
+	background-size:975px 620px;
+}
+.bg1{
+    background-image: url(../images/6.jpg);
+	background-size:975px 580px;
+}
+ul.menu > li > a{
+    float:left;
+    width:100%;
+    height:50px;
+    margin-top:450px;
+    text-align:center;
+    line-height:50px;
+    color:#ddd;
+    background-color:#333;
+    letter-spacing:1px;
+    cursor:pointer;
+    text-decoration:none;
+    text-shadow:0px 0px 1px #fff;
+}
+ul.menu > li ul{
+    list-style:none;
+    float:left;
+    margin-top:-200px;
+    width:100%;
+    height:130px;
+    padding-top:20px;
+    background-repeat:no-repeat;
+    background-color:transparent;
+}
+ul.menu > li ul li{
+    display:none;
+}
+ul.menu > li ul.sub1{
+    background-image:url(../images/bg4sub.png);
+	background-size:324px
+}
+ul.menu > li ul.sub2{
+    background-image:url(../images/bg5sub.png);
+	background-size:324px
+}
+ul.menu > li ul.sub3{
+    background-image:url(../images/bg6sub.png);
+	background-size:324px
+}
+ul.menu > li ul li a{
+    color:#fff;
+    text-decoration:none;
+    line-height:30px;
+    margin: 1% 8%;
+    text-shadow:1px 1px 1px #444;
+    font-size:12px;
+    display: block;
+}
+ul.menu > li ul.sub1 li{
+    display:block;
+}
+/*ul.menu > li ul li a:hover{
+    border-bottom:1px dotted #fff;
+}*/
+
+header {position:relative; width:975px; top:0; height:auto;  overflow:hidden;margin:auto}
+nav{margin:7% 0;float:right;}
+nav>a {
+text-transform: uppercase;
+font-size: 15px;
+font-family: "Trebuchet MS", Arial, sans-serif;
+text-decoration: none;
+text-shadow: 1px 1px 5px #fff;
+letter-spacing: 1px;
+padding-right: 10px;
+color: #ddd;
+margin-left: 10px;
+}
+h1 {
+text-align: left;
+height: 1em;
+font-family: Helvetica;
+color: #eee;
+margin-top: 5%;
+padding-bottom: 13px;
+display: inline-block;
+background: -webkit-linear-gradient(#eee, #848383);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;}
+
+a:active { 
+    text-decoration: underline;
+}
+
+#current { 
+    text-decoration: underline;
+	color:yellow:
+	font-weight: bold;
+}
+
+.current{
+	background-color: blue;
+	color: white;
+	text-transform: uppercase;
+}
+
+footer{bottom:0px;width:100%;background-color:black;position: fixed;text-align: center;}
+.foo{margin: 5px 10px; display: inline-block;text-align:center;}
+.updated{color:white;font-size:10px;float: right;margin: 17px 10px;position:fixed}

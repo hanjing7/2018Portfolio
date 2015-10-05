@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Perspective Page View Navigation</title>
+	<link rel="stylesheet" type="text/css" href="css/menu/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu/component.css" />
+	<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
+	<script src="js/menu/modernizr.custom.25376.js"></script>
+	<style type="text/css">
+	#showMenu{
+		position: fixed;z-index: 10; top: 0;right: 0;}
+		</style>
+	</head>
+	<body>
+		<div id="perspective" class="perspective effect-moveleft">
+			<div class="container">
+
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					<!-- Top Navigation -->
+					<p><button id="showMenu">Show Menu</button></p>
+					<iframe name='designgallery'  style="width:100% ;min-height:850px"></iframe>
+					<iframe name='resume' src="resume.html" style="width:100% ;min-height:850px"></iframe>
+					<iframe name='index' src="resume.html" style="width:100% ;min-height:850px"></iframe>
+				</div><!-- wrapper -->
+			</div><!-- /container -->
+			<nav class="outer-nav right vertical">
+				<a href="index2.html" target="index" class="icon-home">Home</a>
+                <a href="designG.html" target="designgallery" class="icon-news">Gallery</a>
+                <a href="resume.html" target="resume" class="icon-image">Resume</a>
+                <a href="contact.html" class="icon-upload">Contact</a>
+				<a href="#" class="icon-lock">Security</a>
+			</nav>
+		</div><!-- /perspective -->
+		<script src="js/menu/classie.js"></script>
+		<script src="js/menu/menu.js"></script>
+	</body>
+	</html>

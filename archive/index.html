@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+
+IIIIIIIIIIIIIIIIIIII   IIIIII
+     IIII      IIII	    IIII
+     IIII      IIII	    IIII
+     IIII      IIII	    IIII
+     IIII      IIII	    IIII
+     IIII      IIIIIIIIIIIII
+     IIII      IIIIIIIIIIIII
+I    IIII      IIII	    IIII
+II  IIIII      IIII	    IIII
+'IIIIIII'      IIII	    IIII
+ 'IIII'	      IIIIII   IIIIII
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Jing Han Portfolio</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Beautiful Background Image Navigation with jQuery" />
+        <meta name="keywords" content="jquery, background image, animate, menu, navigation, css3, cross-browser compatible"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <!--CSS for menu-->
+        <link rel="stylesheet" type="text/css" href="css/menu/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/menu/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/menu/component.css" />
+        <script src="js/menu/modernizr.custom.25376.js"></script>
+        <style type="text/css">
+            #showMenu{
+                position: fixed;z-index: 10; top: 0;right: 0;}
+        </style>
+        <!--End CSS for menu -->
+        <!--[if lte IE 6]>
+             <link rel="stylesheet" href="css/styleIE6.css" type="text/css" media="screen"/>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="perspective" class="perspective effect-moveleft">
+            <div class="container">
+
+                <div class="wrapper">
+                    <p><button id="showMenu">Show Menu</button></p>
+        <div id="content">
+		
+            <div id="menuWrapper" class="menuWrapper bg1">
+                <ul class="menu" id="menu">
+                    <li class="bg1" style="background-position:0 0;">
+                        <a id="bg1" href="designG.html">My Design</a>
+                        <ul class="sub1" style="background-position:0 0;">
+                            <li><a href="workDesign.php" target="_blank">Sketch Stripe</a></li>
+							<li><a href="http://hanjing.byethost10.com/design" target="_blank">Full Design Gallery</a></li>
+							<li><a href="http://hanjing.byethost10.com/SI649" target="_blank">Data Visualization</a></li>
+                            <!--<li><a href="http://hanjing.byethost10.com/profile/Transcript%202012.pdf">Grad Transcript</a></li>
+                            <li><a href="http://hanjing.byethost10.com/profile/Transcript-Central.pdf">UnderGrad Transcript</a></li>-->
+                        </ul>
+                    </li>
+                    <li class="bg1" style="background-position:33% 0;">
+                        <a id="bg2" href="resume.php" target="_blank">My Passion</a>
+                        <ul class="sub2" style="background-position:33% 0;">
+							<li><a href="resume.php" target="_blank">RESUME</a></li>
+                            <li><a href="http://www-personal.umich.edu/~hanjing/processflow/" target="_blank">WorkFlow Diagram</a></li>
+							
+                            
+                        </ul>
+                    </li>
+                    <li class="last bg1" style="background-position:-66% 0px;">
+                        <a id="bg3" href="http://www-personal.umich.edu/~hanjing/processflow/">Mini Projects</a>
+                        <ul class="sub3" style="background-position:-33% 0;">                            
+							<li><a href="http://hanjing.byethost10.com/CodeBoard" target="_blank">CodeBoard</a>  | <a href="http://www.erdongstudio.com/" target="_blank">Erdong Studio</a></li>
+							<li><a href="http://cci.sites.uofmhosting.net" target="_blank">CCI Website</a> | <a href="http://hanji79.wix.com/newchina	" target="_blank">NewChinia</a></li>
+							<li><a href="http://hanjing.byethost10.com/pizza/" target="_blank">Pizza Order</a> | <a href="http://winlongit.com/indexEn.jsp	" target="_blank">WingLong</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            </div><!-- wrapper -->
+            </div><!-- /container -->
+            <nav class="outer-nav right vertical">
+                <a href="index.html" class="icon-home">Home</a>
+                <a href="designG.html" class="icon-news">Gallery</a>
+                <a href="resume.html" class="icon-image">Resume</a>
+                <a href="contact.html" class="icon-upload">Contact</a>
+                <a href="#" class="icon-star">Favorites</a>
+                <a href="#" class="icon-mail">Messages</a>
+                <a href="#" class="icon-lock">Security</a>
+            </nav>
+        </div><!-- /perspective -->
+
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.bgpos.js"></script>
+		<script type="text/javascript">
+            $(function() {
+                /* position of the <li> that is currently shown */
+                var current = 0;
+				
+				var loaded  = 0;
+				for(var i = 1; i <4; ++i)
+					$('<img />').load(function(){
+						++loaded;
+						if(loaded == 3){
+							$('#bg1,#bg2,#bg3').mouseover(function(e){
+								
+								var $this = $(this);
+								/* if we hover the current one, then don't do anything */
+								if($this.parent().index() == current)
+									return;
+
+								/* item is bg1 or bg2 or bg3, depending where we are hovering */
+								var item = e.target.id;
+
+								/*
+								this is the sub menu overlay. Let's hide the current one
+								if we hover the first <li> or if we come from the last one,
+								then the overlay should move left -> right,
+								otherwise right->left
+								 */
+								if(item == 'bg1' || current == 2)
+									$('#menu .sub'+parseInt(current+1)).stop().animate({backgroundPosition:"(-33% 0)"},300,function(){
+										$(this).find('li').hide();
+									});
+								else
+									$('#menu .sub'+parseInt(current+1)).stop().animate({backgroundPosition:"(33% 0)"},300,function(){
+										$(this).find('li').hide();
+									});
+
+								if(item == 'bg1' || current == 2){
+									/* if we hover the first <li> or if we come from the last one, then the images should move left -> right */
+									$('#menu > li').animate({backgroundPosition:"(-80% 0)"},0).removeClass('bg1 bg2 bg3').addClass(item);
+									move(1,item);
+								}
+								else{
+									/* if we hover the first <li> or if we come from the last one, then the images should move right -> left */
+									$('#menu > li').animate({backgroundPosition:"(100% 0)"},0).removeClass('bg1 bg2 bg3').addClass(item);
+									move(0,item);
+								}
+
+								/*
+								We want that if we go from the first one to the last one (without hovering the middle one),
+								or from the last one to the first one, the middle menu's overlay should also slide, either
+								from left to right or right to left.
+								 */
+								if(current == 2 && item == 'bg1'){
+									$('#menu .sub'+parseInt(current)).stop().animate({backgroundPosition:"(-33% 0)"},300);
+								}
+								if(current == 0 && item == 'bg3'){
+									$('#menu .sub'+parseInt(current+2)).stop().animate({backgroundPosition:"(33% 0)"},300);
+								}
+
+								
+								/* change the current element */
+								current = $this.parent().index();
+								
+								/* let's make the overlay of the current one appear */
+							   
+								$('#menu .sub'+parseInt(current+1)).stop().animate({backgroundPosition:"(0 0)"},300,function(){
+									$(this).find('li').fadeIn();
+								});
+							});
+						}	
+					}).attr('src', 'images/'+i+'.jpg');
+				
+							
+                /*
+                dir:1 - move left->right
+                dir:0 - move right->left
+                 */
+                function move(dir,item){
+                    if(dir){
+                        $('#bg1').parent().stop().animate({backgroundPosition:"(0 0)"},200);
+                        $('#bg2').parent().stop().animate({backgroundPosition:"(-33% 0)"},300);
+                        $('#bg3').parent().stop().animate({backgroundPosition:"(-66% 0)"},400,function(){
+                            $('#menuWrapper').removeClass('bg1 bg2 bg3').addClass(item);
+                        });
+                    }
+                    else{
+                        $('#bg1').parent().stop().animate({backgroundPosition:"(0 0)"},400,function(){
+                            $('#menuWrapper').removeClass('bg1 bg2 bg3').addClass(item);
+                        });
+                        $('#bg2').parent().stop().animate({backgroundPosition:"(-33% 0)"},300);
+                        $('#bg3').parent().stop().animate({backgroundPosition:"(-66% 0)"},200);
+                    }
+                }
+            });
+        </script>
+
+        <script src="js/menu/classie.js"></script>
+        <script src="js/menu/menu.js"></script>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+
+	
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Financial Processing</title>	
+	
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="myscripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		
+		/* Picture Styles */
+		#picture{ background:#FFF url('financial/OverallDiagram.png') no-repeat; overflow:hidden; background-size:1300px}
+			/* Item Specific More Button */
+			#exp1{ top: 30%;left: 27%;}
+			#exp2{ top: 53%; left: 44%; }
+			#exp3{ top: 52%;right: 12%; }
+			#exp4{ top: 43%; right: 8%; }
+		
+	</style>
+	
+</head>
+
+<body>
+	<h1>Financial Processing</h1>
+	<a href="index.html"><button class="financial" onclick="index.html">BACK</button></a>
+	<div id="picture">
+		
+		<!-- More Info Buttons -->
+		
+		<div class="more" id="exp1" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span>4.	“Enrollment Remarks” indicates the visit type of a study, and just appears in some of the studies. If it didn’t specify, FS will go to MiChart, look up each piece of charge for details.
+If FS happen not to have access to the enrollment list, she can either ask for access to CRAO or choose to use the one on Servant as an alternative.
+</span>
+			
+		</div>
+		
+		<div class="more" id="exp2" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span><li>Most of the time charge destination is the same across the board, but sometimes it change across cycles. </li>
+			<li>A lot of the time date and cycle information are at the top of the note. </li>
+			<li>Velos seems to be the only system with date and cycle information</li></span>
+		</div>
+		
+		<div class="more" id="exp3" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>13.	Billing calendar is saved on both eResearch (where IRB team approve the calendar) and group shared drive, created by study team. Charges are initially billed and filled in 
+			it according to it.  Billing calendar list all charge types in column and all cycle in rows, with corresponding destination charge should goes to filled in inside. 
+			</span>
+		</div>
+		
+		<div class="more" id="exp4" style="width: 50px; display: block; z-index: 1;">
+			<a href="#"><img src="more.png"></a>
+			<span>18.	Once FS confirmed the correction requests, the case will be closed at both FS and CRAO sides; a local copy of correction form is also saved on FS side for record, 
+			but it could be reopen any time if other incorrect billing is discovered in the future.</span>
+		</div>
+		
+		<!-- Info Boxes -->
+		<div id="infobox">
+			<span class="close"><a href="#"><img src="close.png"></a></span>
+			<br>
+			
+			<div id="exp1_info" style="display: none;">
+				<img src="financial/1.png"><br>
+			</div>
+			
+			<div id="exp2_info" style="display: none;">
+				<img src="financial/2.png"><br>
+			</div>
+			
+			<div id="exp3_info" style="display: none;">
+				<img src="financial/3.png"><br>
+			</div>
+			
+			<div id="exp4_info" style="display: none;">
+				<img src="financial/4.png"><br>
+			</div>		
+		</div>
+		
+		<!-- Dimmed Background -->
+		<div id="fade_bg">&nbsp;</div>
+		
+	</div>
+
+</body></html>

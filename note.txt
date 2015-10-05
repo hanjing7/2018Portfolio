@@ -1,0 +1,15 @@
+Difference between the three views:
+width more than 1024px:
+normal display with black background
+
+Tablet view (width between 768 and 1024)
+background become white
+
+Mobile view (width smaller than 768)
+background become red
+instead of showing the slideshow, display button including 
+links to targeted site since slideshow and js loading is too heavy for mobile device.
+
+Implementation of media query
+Implemented inside the core html document to make sure they are loaded after the rest of css settings and could override previous settings. 
+Furthermore, make sure the setting configuration for smaller screen is behind settings for larger screen so the page is responsive as the screen size changes

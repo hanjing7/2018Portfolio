@@ -1,0 +1,86 @@
+
+	
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Invoice Processing</title>	
+	
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="myscripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+
+		#picture{background:#FFF url('invoice/OverallDiagram.png') no-repeat; background-size:1300px; overflow:hidden; background-position: 35% 0%;}
+
+			
+			/* Item Specific More Button */
+			#exp1{ top: 40%;left: 44%;}
+			#exp2{ top: 40%; left: 60%; }
+			#exp3{ top: 28%;left: 67%; }
+			#exp4{ top: 28%; right: 4%; }
+
+		
+	</style>
+	
+</head>
+
+<body>
+	<h1>INVOICE PROCESSING</h1><a href="index.html"><button class="invoice">BACK</button></a>
+	
+	<div id="picture">
+		
+		<!-- More Info Buttons -->
+		
+		<div class="more" id="exp1" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span>To facilitate the scrubbing process, sort by Study RMRN, Patient CPI, and inside which, and sort by date of service, and then by billing calendar cycle. </span>
+			
+		</div>
+		
+		<div class="more" id="exp2" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>Import spreadsheet data into [tempVelos] table: check remove headers and click next straight to the end. All previously existing rows in [tempVelos] should be replaced with the new rows after the importing procedure.</span>
+		</div>
+		
+		<div class="more" id="exp3" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>Based on the [Molly Worksheet], immediately identify which piece of charge is missing and what was not required by the procedure. Double check to make sure invoiced amount is correct. As grouped previously, prepare an invoice for each patient in each study. </span>
+		</div>
+		
+		<div class="more" id="exp4" style="width: 50px; display: block; z-index: 1;">
+			<a href="#"><img src="more.png"></a>
+			<span>Some sponsors make payment by invoice, and some others pay by their own milestone. For sponsors pay by milestone, most of invoice is considered to be “regular receivable” that doesn’t need to send. </span>
+		</div>
+		
+		<!-- Info Boxes -->
+		<div id="infobox">
+			<span class="close"><a href="#"><img src="close.png"></a></span>
+			<br>
+			
+			<div id="exp1_info" style="display: none;">
+				<img src="invoice/1.png"><br>
+				<a>1.	Scrubbing the data</a>
+			</div>
+			
+			<div id="exp2_info" style="display: none;">
+				<img src="invoice/2.png"><br>
+				<a>2.	Import data into Access</a>
+			</div>
+			
+			<div id="exp3_info" style="display: none;">
+				<img src="invoice/3.png"><br>
+				<a>3.	Generate Invoice with Grant Reconciler</a>
+			</div>
+			
+			<div id="exp4_info" style="display: none;">
+				<img src="invoice/4.png"><br>
+			</div>		
+		</div>
+		
+		<!-- Dimmed Background -->
+		<div id="fade_bg">&nbsp;</div>
+		
+	</div>
+
+</body></html>

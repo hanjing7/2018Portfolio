@@ -1,0 +1,78 @@
+
+	
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Charge Reconciliation</title>	
+	
+	<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js"></script>
+	<script src="myscripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+
+		/* Picture Styles */
+		#picture{ background:#FFF url('charge/DataFlow.png') no-repeat; overflow:hidden; background-size:1300px}
+		
+			/* Item Specific More Button */
+			button{margin: 2% 7% 0 1%;}
+			#exp1{ top: 51%;left: 29%;}
+			#exp2{ top: 51%; left: 44%; }
+			#exp3{ top: 51%;left: 57%;}
+
+	</style>
+
+</head>
+
+<body>
+	<div><h1>Charge Reconciliation</h1>
+	<a href="index.html"><button class="charg" >BACK</button></a>
+	<a href="charge.html" class="charge">Process</a>
+	<a href="charge1.html" class="charge">Dataflow</a>
+
+	</div>
+
+	<div id="picture">		
+		<!-- More Info Buttons -->
+		
+		<div class="more" id="exp1" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span>Click "+" here to view dataflow diagram expansion</span>
+			
+		</div>
+		
+		<div class="more" id="exp2" style="width: 50px; display: block; z-index: 1; overflow: hidden;">
+			<a href="#"><img src="more.png"></a>
+			<span>Click "+" here to view detailed fomula used</span>
+		</div>
+		<div class="more" id="exp3" style="overflow: hidden; width: 50px; display: block; z-index: 1;">
+			
+			<a href="#"><img src="more.png"></a>
+			<span><li>Click "+" here to view high level representation of overall workflow</li></span>
+			
+		</div>
+
+		
+		<!-- Info Boxes -->
+		<div id="infobox">
+			<span class="close"><a href="#"><img src="close.png"></a></span>
+			<br>
+			
+			<div id="exp1_info" style="display: none;">
+				<img src="charge/6.png" style="width:1000px"><br>
+			</div>
+			
+			<div id="exp2_info" style="display: none;">
+				<img src="charge/7.png" style="width:1000px"><br>
+			</div>
+			<div id="exp3_info" style="display: none;">
+				<img src="charge/8.jpg"><br>
+			</div>
+
+		</div>
+		
+		<!-- Dimmed Background -->
+		<div id="fade_bg">&nbsp;</div>
+		
+	</div>
+</body></html>
